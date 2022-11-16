@@ -44,7 +44,7 @@ def register():
         print(account)
         message = Mail(from_email='mrdakash8550@psnacet.edu.in',to_emails="email",subject="Registration",html_content='<br><p>Your account has been registered successfully</p>')
         try:
-            sg=SendGridAPIClient('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')
+            sg=SendGridAPIClient('SendGrid API key')//changed as API key was exposed
             response=sg.send(message)
             print(response.status_code)
             print(response.body)
