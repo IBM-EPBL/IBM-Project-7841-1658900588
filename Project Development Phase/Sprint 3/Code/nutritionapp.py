@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = 'a'
 try:
     conn = ibm_db.connect(
-        "DATABASE=bludb;HOSTNAME=824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30119;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=jbs10682;PWD=tftKCdz04kDJqL06",
+        "DATABASE=bludb;HOSTNAME=824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30119;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=jbs10682123;PWD=tftKCdz04kDJqL06984",
         "", "")
 except:
     print("Unable to connect: ", ibm_db.conn_error())
