@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = 'a'
 try:
     conn = ibm_db.connect(
-        "DATABASE=bludb;HOSTNAME=824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30119;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=jbs10682;PWD=tftKCdz04kDJqL06",
+        "DATABASE=bludb;HOSTNAME=824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30119;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=jbs106826511;PWD=tftKCdz04kDJqL0649811",
         "", "")
 except:
     print("Unable to connect: ", ibm_db.conn_error())
@@ -44,7 +44,7 @@ def register():
         print(account)
         message = Mail(from_email='mrdakash8550@psnacet.edu.in',to_emails="email",subject="Registration",html_content='<br><p>Your account has been registered successfully</p>')
         try:
-            sg=SendGridAPIClient('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')
+            sg=SendGridAPIClient('SendGrid API key')//changed as API key was exposed
             response=sg.send(message)
             print(response.status_code)
             print(response.body)
